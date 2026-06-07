@@ -6,7 +6,9 @@
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
     "db:generate": "prisma generate",
-    "db:push": "prisma db push"
+    "db:push": "prisma db push",
+    "postinstall": "prisma generate",
+    "build": "prisma generate && prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^5.10.0",
