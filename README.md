@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 💸 SpendWise — Personal Expense Tracker
 
 A full-stack personal expense tracker with authentication, CRUD operations, and beautiful analytics.
@@ -138,3 +139,6 @@ cd client && npm run build     # outputs to client/dist/
 ```
 
 Then serve `client/dist/` with Nginx or a static host, and run the server with `node src/index.js`.
+=======
+# New_Expense_Tracker
+>>>>>>> b05274958f89fb58fd7492ae4736b24cfe56f255
