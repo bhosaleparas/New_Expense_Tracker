@@ -5,13 +5,32 @@ const authRoutes = require('./routes/auth');
 const expenseRoutes = require('./routes/expenses');
 const analyticsRoutes = require('./routes/analytics');
 
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
-  credentials: true,
-}));
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://doctor-patient-management-system-1-5b8n.onrender.com'
+];
+
+const corsOptions = {
+  origin: function(origin, callback) {
+    // allow requests with no origin (like Postman)
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+};
+
+// Apply CORS middleware
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
