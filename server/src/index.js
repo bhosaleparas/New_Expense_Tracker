@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://doctor-patient-management-system-1-5b8n.onrender.com'
+  'https://new-expense-tracker-client.onrender.com'
 ];
 
 const corsOptions = {
