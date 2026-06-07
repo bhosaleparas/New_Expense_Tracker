@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 💸 SpendWise — Personal Expense Tracker
 
 A full-stack personal expense tracker with authentication, CRUD operations, and beautiful analytics.
